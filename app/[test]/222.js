@@ -34,7 +34,7 @@ nums.filter(x => x % 2 === 0)           // [2, 4]
 
 // reduce — sprowadza do jednej wartości
 nums.reduce((acc, x) => acc + x, 0)     // 15
-nums.reduce((acc, x) => [...acc, x * 2], [] as number[])  // [2, 4, 6, 8, 10]
+nums.reduce((acc, x) => [...acc, x * 2], [] )  // [2, 4, 6, 8, 10]
 
 // find — zwraca PIERWSZY pasujący element lub undefined
 nums.find(x => x > 3)                   // 4
@@ -109,7 +109,8 @@ Object.hasOwn(obj, 'name')  // true — własna właściwość (nie z prototypu)
 const config = { host: 'localhost', port: 3000 }
 
 // Map — gdy klucze dynamiczne lub nie-stringi, częste dodawanie/usuwanie
-const cache = new Map<string, number>()
+// const cache = new Map<string, number>()
+const cache = new Map()
 cache.set('key', 1)
 cache.get('key')        // 1
 cache.has('key')        // true
@@ -117,7 +118,7 @@ cache.delete('key')
 cache.size              // liczba wpisów
 
 // WeakMap — klucz musi być OBIEKTEM, słaba referencja (GC może usunąć)
-const weakCache = new WeakMap<object, string>()
+const weakCache = new WeakMap()
 weakCache.set(obj, 'wartość')  // obj musi być obiektem, nie prymitywem
 
 
