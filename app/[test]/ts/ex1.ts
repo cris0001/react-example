@@ -63,3 +63,45 @@ function fetchUsers():Promise<ApiResponse<User[]>>{
         });
     });
 }
+
+// -------------------------------------------
+// -------------------------------------------
+// -------------------------------------------
+// -------------------------------------------
+
+// masz funkcję:
+function createOrder(
+    userId: number,
+    products: { id: number; quantity: number }[],
+    discount?: number
+) {
+    return {
+        id: Math.random(),
+        userId,
+        products,
+        discount: discount ?? 0,
+        total: products.length * 100,
+        status: 'pending' as const,
+        createdAt: new Date()
+    };
+}
+
+async function fetchOrder(id: number): Promise<ReturnType<typeof createOrder>> {
+    return createOrder(1, []);
+}
+
+
+// Typ Order — wyciągnij z createOrder
+type Order = ReturnType<typeof createOrder>
+
+// Typ OrderParams — wyciągnij parametry createOrder
+type OrderParams = Parameters<typeof createOrder>
+
+// Typ FetchedOrder — wyciągnij typ po rozwiązaniu Promise z fetchOrder
+type FetchOrder = Awaited<ReturnType<typeof fetchOrder>>
+
+// Typ OrderStatus — wyciągnij typ pola status z Order
+type OrderStatus = Order['status'];
+
+// Typ PartialOrder — wszystkie pola Order opcjonalne
+type PartialOrder = Partial<Order>
