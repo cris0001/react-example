@@ -19,7 +19,7 @@ type UnpackRecord<T> = T extends Record<string, infer V> ? V : never;
 
 
 
-async function fetchUser(id: number): Promise<User> {
+async function fetchUserr(id: number): Promise<User> {
     return {} as User;
 }
 
@@ -33,5 +33,5 @@ type UnpackAsync<T> = T extends (...args:any[])=> Promise<infer U>? U:never
 
 // Użyj UnpackAsync na obu funkcjach
 
-type FetchUser = UnpackAsync<typeof fetchUser>
+type FetchUser = UnpackAsync<typeof fetchUserr>
 type fetchProducts = UnpackAsync<typeof fetchProducts>

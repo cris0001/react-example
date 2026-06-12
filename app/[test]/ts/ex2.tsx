@@ -60,18 +60,29 @@ const UserList = ({users,onDelete,isLoading}:Props)=>{
 // Obsługuje loading, success i error
 // Używa AbortController do cleanup
 
-function useApi<T>(url: string): ApiState<T>{
-
-   const [state, setState] = useState<ApiState<T>>({variant:'idle'})
+function useApi<T>(url: string): ApiState<T> {
+    const [state, setState] = useState<ApiState<T>>({ variant: 'idle' });
 
     useEffect(() => {
-        const controller = new AbortController()
+        const controller = new AbortController();
 
-        setState({variant:'loading',message:'pobieranie danych'})
+        setState({ variant: 'loading', message: 'Ładowanie...' });
 
+        fetch(url, { signal: controller.signal })
+            .then(r => {
+                if (!r.ok) throw new Error(`HTTP error: ${r.status}`);
+                return r.json();
+            })
+            .then((data: T) => setState({ variant: 'success', data }))
+            .catch(err => {
+                if (err.name === 'AbortError') return; // ignoruj anulowane
+                setState({ variant: 'error', message: err.message });
+            });
+
+        return () => controller.abort();
     }, [url]);
 
-
-    return state
-
+    return state;
 }
+
+
