@@ -8,7 +8,7 @@ interface Product{
     inStock:boolean
 }
 // Typ ProductPreview który zawiera tylko id i name z Product (użyj utility type)
-type ProductPreview=Pick<Product, 'id'|'name'>
+type ProductPreview2=Pick<Product, 'id'|'name'>
 
 //Typ ProductStatus — union z wartościami: 'available', 'out_of_stock', 'discontinued'
 type ProductStatus = 'available'| 'out_of_stock'| 'discontinued'

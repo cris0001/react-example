@@ -20,14 +20,14 @@ type StringKeys<T> = { [K in keyof T as T[K] extends string ? K : never]: T[K]}
 
 //Typ Optional<T, K extends keyof T> — tylko podane pola K opcjonalne, reszta wymagana
 
-type Optional<T, K extends keyof T> =  Omit<T, K> & Partial<Pick<T, K>>;
+type Optionall<T, K extends keyof T> =  Omit<T, K> & Partial<Pick<T, K>>;
 
 
 
 // Typ Getters<T> — dla każdego pola tworzy metodę getX która zwraca typ pola
 
 
-type Getters<T> = {
+type Getters2<T> = {
     [K in keyof T as `get${Capitalize<string & K>}`]: () => T[K]
     //                  ↑ template literal type — dodaje 'get' przed nazwą klucza
     //                         ↑ Capitalize — pierwsza litera wielka
@@ -36,7 +36,7 @@ type Getters<T> = {
 
 // Typ Nullable<T> — każde pole może być null
 
-type Nullable<T> = {
+type Nullablee<T> = {
     [K in keyof T]: T[K] | null
 }
 
@@ -44,7 +44,7 @@ type Nullable<T> = {
 
 //Typ EventHandlers<T> — dla każdego pola tworzy onChangeX gdzie X to nazwa pola z wielką literą, każdy handler przyjmuje nową wartość tego pola
 
-type EventHandlers<T> ={
+type EventHandlers2<T> ={
     [K in keyof T as `onChange${Capitalize<string & K>}`]:(value: T[K])=> void
 }
 

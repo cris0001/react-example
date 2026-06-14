@@ -92,7 +92,7 @@ async function fetchOrder(id: number): Promise<ReturnType<typeof createOrder>> {
 
 
 // Typ Order — wyciągnij z createOrder
-type Order = ReturnType<typeof createOrder>
+type Order2 = ReturnType<typeof createOrder>
 
 // Typ OrderParams — wyciągnij parametry createOrder
 type OrderParams = Parameters<typeof createOrder>
@@ -101,7 +101,7 @@ type OrderParams = Parameters<typeof createOrder>
 type FetchOrder = Awaited<ReturnType<typeof fetchOrder>>
 
 // Typ OrderStatus — wyciągnij typ pola status z Order
-type OrderStatus = Order['status'];
+type OrderStatus2 = Order['status'];
 
 // Typ PartialOrder — wszystkie pola Order opcjonalne
 type PartialOrder = Partial<Order>

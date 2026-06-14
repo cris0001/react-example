@@ -124,7 +124,7 @@ function makeEventBus() {
 }
 
 const bus = makeEventBus()
-const handler = (msg: string) => console.log(msg)
+const handler3 = (msg: string) => console.log(msg)
 bus.on('click', handler)
 bus.emit('click', 'hello')  // "hello"
 bus.off('click', handler)
