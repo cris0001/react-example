@@ -1,9 +1,11 @@
-// Zadanie 1 — typy vs interfejsy: 😎😎😎😎😎
-// Zadanie 1 — typy vs interfejsy: 😎😎😎😎😎
-// Zadanie 1 — typy vs interfejsy: 😎😎😎😎😎
-// Zadanie 1 — typy vs interfejsy: 😎😎😎😎😎
+// Zadanie 1 — typy vs interfejsy: 💻💻💻
+// Zadanie 1 — typy vs interfejsy: 💻💻💻
+// Zadanie 1 — typy vs interfejsy: 💻💻💻
+// Zadanie 1 — typy vs interfejsy: 💻💻💻
 
 
+
+import {useState} from "react";
 
 interface Order {
     id: number;
@@ -24,10 +26,10 @@ type OrderStatus = Order['status']
 type AdminOrder = Order & {handledBy:string, note?:string}
 
 
-// Zadanie 2 — generics: 😎😎😎😎😎
-// Zadanie 2 — generics: 😎😎😎😎😎
-// Zadanie 2 — generics: 😎😎😎😎😎
-// Zadanie 2 — generics: 😎😎😎😎😎
+// Zadanie 2 — generics: 💻💻💻
+// Zadanie 2 — generics: 💻💻💻
+// Zadanie 2 — generics: 💻💻💻
+// Zadanie 2 — generics: 💻💻💻
 
 // napisz funkcję swap<T, U> która przyjmuje parę [T, U] i zwraca [U, T]
 
@@ -55,10 +57,10 @@ function makePair<T,U>(x:T,y:U):Pair<T, U>{
 }
 
 
-// Zadanie 3 — utility types + mapped types: 😎😎😎😎😎
-// Zadanie 3 — utility types + mapped types: 😎😎😎😎😎
-// Zadanie 3 — utility types + mapped types: 😎😎😎😎😎
-// Zadanie 3 — utility types + mapped types: 😎😎😎😎😎
+// Zadanie 3 — utility types + mapped types: 💻💻💻
+// Zadanie 3 — utility types + mapped types: 💻💻💻
+// Zadanie 3 — utility types + mapped types: 💻💻💻
+// Zadanie 3 — utility types + mapped types: 💻💻💻
 
 
 // mając Order napisz:
@@ -76,10 +78,10 @@ type ReadonlyOrder = Readonly<Order>
 type OrderKeys = keyof Order
 
 
-// Zadanie 4 — discriminated unions + type guards: 😎😎😎😎😎
-// Zadanie 4 — discriminated unions + type guards: 😎😎😎😎😎
-// Zadanie 4 — discriminated unions + type guards: 😎😎😎😎😎
-// Zadanie 4 — discriminated unions + type guards: 😎😎😎😎😎
+// Zadanie 4 — discriminated unions + type guards: 💻💻💻
+// Zadanie 4 — discriminated unions + type guards: 💻💻💻
+// Zadanie 4 — discriminated unions + type guards: 💻💻💻
+// Zadanie 4 — discriminated unions + type guards: 💻💻💻
 
 // napisz discriminated union PaymentMethod:
 // - card z polami: cardNumber: string, expiryDate: string
@@ -113,12 +115,10 @@ function isCardPayment(x: PaymentMethod): x is Extract<PaymentMethod, { type: 'c
 }
 
 
-// Zadanie 5 —  conditional types + infer: 😎😎😎😎😎
-// Zadanie 5 —  conditional types + infer: 😎😎😎😎😎
-// Zadanie 5 —  conditional types + infer: 😎😎😎😎😎
-// Zadanie 5 —  conditional types + infer: 😎😎😎😎😎
-
-
+// Zadanie 5 —  conditional types + infer: 💻💻💻
+// Zadanie 5 —  conditional types + infer: 💻💻💻
+// Zadanie 5 —  conditional types + infer: 💻💻💻
+// Zadanie 5 —  conditional types + infer: 💻💻💻
 
 
 // napisz typ UnwrapArray<T> — jeśli T to tablica zwraca typ elementu, jeśli nie zwraca T
@@ -134,10 +134,10 @@ type UnwrapPromise<T> = T extends Promise<infer U>? U:T
 type FirstArgs<T> = T extends (first: infer U, ...args:any[])=> any? U:T
 
 
-// Zadanie 6 —  mapped types: 😎😎😎😎😎
-// Zadanie 6 —  mapped types: 😎😎😎😎😎
-// Zadanie 6 —  mapped types: 😎😎😎😎😎
-// Zadanie 6 —  mapped types: 😎😎😎😎😎
+// Zadanie 6 —  mapped types: 💻💻💻
+// Zadanie 6 —  mapped types: 💻💻💻
+// Zadanie 6 —  mapped types: 💻💻💻
+// Zadanie 6 —  mapped types: 💻💻💻
 
 
 
@@ -156,10 +156,10 @@ type Getters<T>= {[K in keyof T as `get${Capitalize<string & K>}`]: () => T[K]}
 
 
 
-// Zadanie 7 —  template literal types: 😎😎😎😎😎
-// Zadanie 7 —  template literal types: 😎😎😎😎😎
-// Zadanie 7 —  template literal types: 😎😎😎😎😎
-// Zadanie 7 —  template literal types: 😎😎😎😎😎
+// Zadanie 7 —  template literal types: 💻💻💻
+// Zadanie 7 —  template literal types: 💻💻💻
+// Zadanie 7 —  template literal types: 💻💻💻
+// Zadanie 7 —  template literal types: 💻💻💻
 
 
 // napisz typ EventHandlers<T> — dla każdego pola tworzy handler onChange
@@ -180,10 +180,10 @@ type CSSWithDirection = `${CSSProperty}-${Directions}`
 // np. 'margin-top' | 'margin-bottom' | 'padding-left' itp.
 
 
-// Zadanie 8 —  branded types: 😎😎😎😎😎
-// Zadanie 8 —  branded types: 😎😎😎😎😎
-// Zadanie 8 —  branded types: 😎😎😎😎😎
-// Zadanie 8 —  branded types: 😎😎😎😎😎
+// Zadanie 8 —  branded types: 💻💻💻
+// Zadanie 8 —  branded types: 💻💻💻
+// Zadanie 8 —  branded types: 💻💻💻
+// Zadanie 8 —  branded types: 💻💻💻
 
 
 
@@ -217,6 +217,140 @@ function getOrder(x:OrderId){
 const validOrderId = createOrderId(5)
 const validCustomerId = createCustomerId(323)
 getOrder(validOrderId)
+
+
+
+
+
+// Zadanie 9 — 💻💻💻
+// Zadanie 9 — 💻💻💻
+// Zadanie 9 — 💻💻💻
+// Zadanie 9 — 💻💻💻
+
+
+// napisz hook useOrderForm który:
+// - przyjmuje initialOrder: Partial<Order>
+// - zwraca FormState<Partial<Order>> plus metody setValue i reset
+//             FormState<T> to typ opisujący stan formularza z trzema polami:
+//
+//                 values — aktualne wartości inputów (wszystko jako string)
+//             errors — błędy walidacji (string | undefined)
+//             touched — czy pole było dotknięte (boolean)
+// - setValue przyjmuje klucz z Order i wartość
+// - używa ApiState<Order> do śledzenia stanu zapisu
+// - ma metodę submit która zmienia ApiState na loading, potem success lub error
+
+
+
+
+type FormState<T extends object> = {
+    val: {[K in keyof T]:string},
+    err: { [K in keyof T]: string | undefined };
+    tched: { [K in keyof T]: boolean };
+}
+
+function useOrderForm<T>(initialOrder: Partial<Order>):FormState<Partial<Order>>& {
+    setValue(key: keyof T, value: string): void;
+    reset(): void;
+    submit(): void;
+}{
+
+    // const[values,setValues] = useState<{ [K in keyof T]: string }>(Object.fromEntries(
+    //     Object.entries(initialValues as object).map(([k]) => [k, ''])
+    // ) as { [K in keyof T]: string })
+
+    const [val, setVal] = useState<{ [K in keyof T]: string }>(Object.fromEntries(Object.entries(initialOrder as object).map(([K])=> [K,''])) as {[K in keyof T]: string} )
+    const [err, setErr] = useState<{ [K in keyof T]: string | undefined }>(Object.fromEntries(Object.entries(initialOrder as object).map(([K])=> [K,undefined])) as {[K in keyof T]: string | undefined} )
+    const [tched, setTched] = useState<{ [K in keyof T]: boolean }>(Object.fromEntries(Object.entries(initialOrder as object).map(([K])=> [K,false])) as {[K in keyof T]: boolean} )
+
+    const setValue = (key: keyof T, value: string):void => {
+        setVal(prev => ({ ...prev, [key]: value }));
+    }
+
+    const reset = ()=>{
+        setVal(Object.fromEntries(Object.entries(initialOrder as object).map(([K])=> [K,''])) as {[K in keyof T]: string})
+        setErr(Object.fromEntries(Object.entries(initialOrder as object).map(([K])=> [K,undefined])) as {[K in keyof T]: string | undefined} )
+        setTched(Object.fromEntries(Object.entries(initialOrder as object).map(([K])=> [K,false])) as {[K in keyof T]: boolean})
+    }
+
+    const submit =()=>{
+        console.log('submit')
+    }
+
+
+    return {reset, submit, setValue, val, err, tched}
+
+}
+
+// Z 10 —  distributive conditional types + infer: 💻💻💻
+// Z 10 —  distributive conditional types + infer: 💻💻💻
+// Z 10 —  distributive conditional types + infer: 💻💻💻
+// Z 10 —  distributive conditional types + infer: 💻💻💻
+
+
+
+// napisz typ Flatten<T> — jeśli T to tablica tablic, spłaszcza o jeden poziom
+// np. Flatten<string[][]> = string[]
+// np. Flatten<string[]> = string[]  — już płaska, zostaje
+
+type Flatten2<T> = T extends Array<Array<infer U>> ? U[] : T
+
+
+// napisz typ DeepUnwrap<T> — rekurencyjnie rozpakowuje Promise
+// np. DeepUnwrap<Promise<Promise<User>>> = User
+// np. DeepUnwrap<Promise<User>> = User
+// np. DeepUnwrap<User> = User
+
+
+type DeepUnwrap<T> = T extends Promise< infer U>? DeepUnwrap<U>: T
+
+
+// Z 11 —  💻💻💻
+// Z 11 —  💻💻💻
+// Z 11 —  💻💻💻
+// Z 11 —  💻💻💻
+
+
+
+
+// napisz typ Repository<T> który tworzy obiekt z metodami CRUD:
+// - findById(id: number): Promise<T>
+// - findAll(): Promise<T[]>
+// - create(data: Omit<T, 'id'>): Promise<T>
+// - update(id: number, data: Partial<Omit<T, 'id'>>): Promise<T>
+// - delete(id: number): Promise<void>
+// użyj go dla Order i napisz implementację orderRepository
+
+
+type Repository<T>={
+    findById(id:number): Promise<T>
+    findAll(): Promise<T[]>
+    create(data: Omit<T, 'id'>): Promise<T>
+    update(id: number, data: Partial<Omit<T, 'id'>>): Promise<T>
+    delete(id: number): Promise<void>
+}
+
+
+const orderRepository: Repository<Order> = {
+    findById: async (id) => ({} as Order),
+    findAll: async () => ([] as Order[]),
+    create: async (data) => ({} as Order),
+    update: async (id, data) => ({} as Order),
+    delete: async (id) => {},
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
