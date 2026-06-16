@@ -342,19 +342,207 @@ const orderRepository: Repository<Order> = {
 
 
 
+// Z 12 —  generics + conditional types + infer: 💻💻💻
+// Z 12 —  generics + conditional types + infer: 💻💻💻
+// Z 12 —  generics + conditional types + infer: 💻💻💻
+// Z 12 —  generics + conditional types + infer: 💻💻💻
+
+
+
+// napisz typ DeepPartial<T> — rekurencyjnie robi wszystkie pola opcjonalne
+// np. dla:
+// { id: number; address: { city: string; zip: string } }
+// wynik:
+// { id?: number; address?: { city?: string; zip?: string } }
+
+type DeepPartial<T> = {[K in keyof T]?: T[K] extends object? DeepPartial<T[K]>: T[K]}
+
+
+// Z 13 —  branded types + smart constructors + type guards: 💻💻💻
+// Z 13 —  branded types + smart constructors + type guards: 💻💻💻
+// Z 13 —  branded types + smart constructors + type guards: 💻💻💻
+// Z 13 —  branded types + smart constructors + type guards: 💻💻💻
+
+
+
+
+// napisz Brand<T, B>
+
+// napisz typy: Email, PhoneNumber, Url — wszystkie oparte na string
+// napisz smart constructory dla każdego z walidacją:
+//   - Email musi zawierać @
+//   - PhoneNumber musi mieć 9 cyfr
+//   - Url musi zaczynać się od https://
+
+
+type Brand2<T, B> = T & { __brand: B };
+
+type Email = Brand2<string, 'email_'>
+type PhoneNumber = Brand2<string, 'phoneNumber_'>
+type Url = Brand2<string, 'url_'>
+
+
+
+function secureEmail(x:string):Email{
+   if(!x.includes('@')) throw new Error('bledny email')
+    return x as Email
+}
+
+
+function securePhoneNumber(x:string):PhoneNumber{
+    if(!/^\d{9}$/.test(x)) throw new Error('bledny nr tel')
+    return x as PhoneNumber
+}
+
+function secureUrl(x:string): Url{
+    if(!x.startsWith('//')) throw new Error('bledny url')
+    return x as Url
+}
+
+
+// napisz typ ContactInfo z polami: email: Email, phone: PhoneNumber, website: Url
+
+
+type ContactInfo= {
+    email:Email,
+    phone:PhoneNumber,
+    website:Url
+}
+
+// napisz funkcję createContact która przyjmuje raw stringi, waliduje i zwraca ContactInfo | null
+
+
+function createContact(email: string, phone: string, url: string): ContactInfo | null{
+
+    const validEmail = secureEmail(email);
+    const validPhone = securePhoneNumber(phone);
+    const validUrl = secureUrl(url);
+
+    if (!validEmail || !validPhone || !validUrl) return null;
+    return { email: validEmail, phone: validPhone, website: validUrl }
+}
+
+
+
+// Z 14 —  💻💻💻
+// Z 14 —  💻💻💻
+// Z 14 —  💻💻💻
+// Z 14 —  💻💻💻
+
+
+
+
+// napisz typ Builder<T> który tworzy fluent builder dla dowolnego obiektu T
+// każda metoda set<K extends keyof T>(key: K, value: T[K]) zwraca Builder<T>
+// metoda build() zwraca T
+
+// napisz implementację createBuilder<T>() która tworzy taki builder
+// użyj go dla Order
+
+
+type Builder<T> = {
+    set<K extends keyof T>(key: K, value: T[K]):Builder<T>
+    build: ()=> T
+}
+
+
+function createBuilder<T>(): Builder<T> {
+    const data = {} as T; // pusty obiekt na start
+
+    return {
+        set(key, value) {
+            data[key] = value;
+            return this; // zwracasz siebie żeby można było chainować
+        },
+        build() {
+            return data;
+        }
+    }
+}
+
+const order = createBuilder<Order>()
+    .set('id', 1)           // ustawiasz id
+    .set('total', 100)      // ustawiasz total
+    .set('status', 'pending') // ustawiasz status
+    .build();               // zwraca { id: 1, total: 100, status: 'pending' }
+
+
+// Z 15 —  branded types + smart constructors + type guards: 💻💻💻
+// Z 15 —  branded types + smart constructors + type guards: 💻💻💻
+// Z 15 —  branded types + smart constructors + type guards: 💻💻💻
+// Z 15 —  branded types + smart constructors + type guards: 💻💻💻
+
+
+
+// napisz typ PickByValue<T, V> — wybiera pola z T gdzie wartość jest typu V
+// np. PickByValue<Order, string> = { status: string }
+// np. PickByValue<Order, number> = { id: number; customerId: number; total: number }
+
+type PickByValue<T,V> = { [K in keyof T as T[K] extends V ? K : never]: T[K] }
+
+// napisz typ OmitByValue<T, V> — usuwa pola z T gdzie wartość jest typu V
+
+type OmitByValue<T,V> = { [K in keyof T as T[K] extends V ? never : K]: T[K] }
 
 
 
 
 
+// Z 16 —  💻💻💻
+// Z 16 —  💻💻💻
+// Z 16 —  💻💻💻
+// Z 16 —  💻💻💻
 
 
+// napisz typ Pipeline<T> który reprezentuje serię transformacji danych
+// każda transformacja to funkcja (input: T) => T
+// Pipeline ma metody:
+// - pipe(fn: (input: T) => T): Pipeline<T> — dodaje transformację
+// - execute(input: T): T — wykonuje wszystkie transformacje po kolei
+
+type Pipeline<T> ={
+    pipe(fn: (input: T) => T): Pipeline<T>
+    execute(input: T): T
+}
 
 
+// napisz implementację createPipeline<T>()
+// użyj dla Order — dodaj transformacje:
+// - dodaj VAT do total (total * 1.23)
+// - ustaw status na 'processing'
+// - zaokrąglij total do 2 miejsc po przecinku
 
 
+function createPipeline<T>(): Pipeline<T> {
+    const fns: ((input: T) => T)[] = [];
 
+    return {
+        pipe(fn) {
+            fns.push(fn);  // dodajesz funkcję do tablicy
+            return this;   // chainowanie
+        },
+        execute(input) {
+            return fns.reduce((acc, fn) => fn(acc), input);
+            // reduce — przepuszczasz input przez każdą funkcję po kolei
+            // acc = aktualny wynik, fn = kolejna transformacja
+        }
+    }
+}
 
+// użycie dla Order
+const processOrder = createPipeline<Order>()
+    .pipe(order => ({ ...order, total: order.total * 1.23 }))           // VAT
+    .pipe(order => ({ ...order, status: 'processing' as const }))       // status
+    .pipe(order => ({ ...order, total: Math.round(order.total * 100) / 100 })) // zaokrąglenie
+
+const result = processOrder.execute({
+    id: 1,
+    customerId: 1,
+    total: 100,
+    status: 'pending',
+    createdAt: new Date()
+});
+// { id: 1, customerId: 1, total: 123, status: 'processing', createdAt: ... }
 
 
 
