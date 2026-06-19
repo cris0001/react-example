@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potvrdenie o doručení odstúpenia od zmluvy</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Tahoma, Arial, Verdana, sans-serif; font-size: 12px; color: #333333;">
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f4f4f4;">
+    <tr>
+        <td align="center" style="padding: 20px 10px;">
+
+            <!-- Hlavná tabuľka emailu -->
+            <table width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border: 1px solid #e0e0e0;">
+
+                <!-- HLAVIČKA: Logo + Názov -->
+                <tr>
+                    <td style="padding: 15px 20px; border-bottom: 2px solid #cbccd0;">
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td width="220" valign="middle">
+                                    <div style="background-color: #F5DA02; padding: 8px 16px;">
+                                        <img src="https://www.merkurymarket.pl/gfx/merkurymarket/_thumbs/pl/media/14/1/logo_2-2,Zox3v5SVlJbr49Sdm6ZaZrBkh3t3lJuqaQ-png.webp"
+                                             alt="Merkury Market"
+                                             width="220" height="27"
+                                             style="display: block; border: 0;">
+                                    </div>
+                                </td>
+                                <td style="padding-left: 15px; text-align: right; font-size: 12px; font-weight: bold; color: #333333; line-height: 1.4;">
+                                    Potvrdenie o doručení odstúpenia od zmluvy
+                                    {{NR_ZAMOWIENIA}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- HLAVNÝ OBSAH -->
+                <tr>
+                    <td style="padding: 20px 20px 10px 20px; font-size: 12px; line-height: 1.8; color: #333333;">
+
+                        <!-- Údaje predávajúceho (zarovnané vpravo) -->
+                        <p style="text-align: right; margin: 0 0 30px 0; line-height: 1.7;">
+                            MERKURY SHOP s.r.o.<br>
+                            Duklianska 11, 080 01 Prešov, Slovensko<br>
+                            IČO: 51 231 735<br>
+                            Zapísaná v Obchodnom registri vedenom Okresným súdom Prešov, Oddiel: Sro,<br>
+                            Vložka č.: 35815/P<br>
+                            E-mail:&nbsp;<a href="mailto:odstupenie@merkurymarket.sk" style="color: #DC2322; text-decoration: none;">odstupenie@merkurymarket.sk</a>
+                        </p>
+
+                        <!-- Oslovenie -->
+                        <p style="margin: 0 0 10px 0;">Vážený zákazník,</p>
+                        <p style="margin: 0 0 20px 0;">veľmi nás mrzí, že náš výrobok nevyhovoval Vašim očakávaniam.</p>
+
+                        <!-- Oznámenie o odstúpení -->
+                        <p style="margin: 0 0 10px 0;">Týmto sa oznamuje odstúpenie od zmluvy o dodaní alebo poskytnutí tohto produktu:</p>
+
+                        <!-- PRODUKTY - Java wstawia tyle <tr> + <tr spacer> ile produktów, ostatni bez spacera -->
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                            <!-- produkt 1 -->
+                            <tr>
+                                <td style="padding: 8px 12px; font-size: 12px; line-height: 1.7; border-left: 3px solid #DC2322;">
+                                    <strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} KS</strong><br>
+                                    <span style="color: #555555;">Hodnota: <strong>{{KWOTA_ZWROTU}}</strong></span>
+                                </td>
+                            </tr>
+
+                            <!-- odstup medzi produktmi -->
+                            <tr><td style="height: 8px; font-size: 0; line-height: 0;">&nbsp;</td></tr>
+
+                            <!-- produkt 2 -->
+                            <tr>
+                                <td style="padding: 8px 12px; font-size: 12px; line-height: 1.7; border-left: 3px solid #DC2322;">
+                                    <strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} KS</strong><br>
+                                    <span style="color: #555555;">Hodnota: <strong>{{KWOTA_ZWROTU}}</strong></span>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <!-- Informácie o objednávke -->
+                        <p style="margin: 14px 0 10px 0;">
+                            Číslo objednávky:&nbsp;
+                            <strong style="color: #DC2322;">{{NR_ZAMOWIENIA}}</strong>
+                        </p>
+
+                        <!-- Vrátenie peňazí -->
+                        <p style="margin: 0 0 15px 0;">
+                            <strong>Vrátenie peňazí na bankový účet (ak je uvedené):&nbsp;</strong>{{NUMER_KONTA}}
+                        </p>
+
+                        <!-- Potvrdenie doručenia -->
+                        <p style="margin: 0 0 20px 0;">
+                            Potvrdzujeme, že nám Vaše oznámenie o odstúpení od zmluvy bolo doručené dňa&nbsp;
+                            <strong style="color: #DC2322;">{{DATA_ZLOZENIA}}</strong>
+                        </p>
+
+                        <!-- Právny text SK - iné ako PL (slovenské právo) -->
+                        <p style="margin: 0 0 15px 0;">
+                            Pokiaľ sa tovar, ktorého sa odstúpenie od zmluvy týka nachádza vo Vašej držbe, ste povinná/-ý do 14 dní odo dňa odstúpenia od zmluvy uzavretej na diaľku zaslať alebo doručiť tovar späť na našu adresu. Upozorňujeme Vás, že zodpovedáte za zníženie hodnoty tovaru, ktoré vzniklo v dôsledku zaobchádzania s tovarom, ktoré je nad rámec zaobchádzania potrebného na zistenie vlastností a funkčnosti tovaru.
+                        </p>
+
+                        <p style="margin: 0 0 20px 0;">
+                            Vaše platby Vám budú vrátené do 14 dní odo dňa doručenia odstúpenia od zmluvy, v rozsahu zodpovedajúcom odstúpeniu od zmluvy (pokiaľ ste odstúpili od celej zmluvy, v celom rozsahu), okrem prípadu, ak ste si výslovne zvolili iný spôsob dodania ako najlacnejší bežný spôsob dodania ponúkaný našou spoločnosťou. Súčasne informujeme, že nie sme povinní vrátiť Vaše platby predtým, ako nám nie je tovar, ktorého sa odstúpenie od zmluvy týka doručený alebo nám nie je preukázané jeho odoslanie. Vaše platby budú vrátené rovnakým spôsobom aký ste použili pri ich úhrade, ak ste v rámci formulára nezvolili vrátenie peňazí na bankový účet - pokiaľ si želáte vrátenie iným spôsobom, bezodkladne nás kontaktujte.
+                        </p>
+
+                        <!-- Pozdravy -->
+                        <p style="margin: 0 0 5px 0;">
+                            Prajeme pekný deň,<br>
+                            tím internetového obchodu&nbsp;
+                            <a href="http://merkurymarket.sk/" target="_blank" style="color: #DC2322; text-decoration: none;">merkurymarket.sk</a>
+                        </p>
+
+                        <p style="margin: 20px 0 5px 0; color: #aaaaaa;">................................................................</p>
+
+                        <!-- Kontaktné údaje -->
+                        <p style="margin: 0 0 15px 0; line-height: 1.8;">
+                            Na infolinke sme Vám k dispozícii od pondelka do piatka od 8:00 do 20:00 hod<br>
+                            Kontaktné telefónne čísla:&nbsp;
+                            <a href="tel:051221130" style="color: #DC2322; text-decoration: none;">051 22 11 130</a>,&nbsp;
+                            <a href="tel:051221131" style="color: #DC2322; text-decoration: none;">051 22 11 131</a>,&nbsp;
+                            <a href="tel:051221132" style="color: #DC2322; text-decoration: none;">051 22 11 132</a><br>
+                            e-mail:&nbsp;
+                            <a href="mailto:eshop@merkurymarket.sk" style="color: #DC2322; text-decoration: none;">eshop@merkurymarket.sk</a>
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- PÄTIČKA -->
+                <tr>
+                    <td style="padding: 10px 20px; border-top: 1px solid #cbccd0; font-size: 11px; color: #666666; text-align: center;">
+                        All rights reserved &copy; {{ROK}}&nbsp;
+                        <a href="http://www.merkurymarket.sk/" target="_blank" style="color: #DC2322; text-decoration: none;">Merkury Market</a>
+                    </td>
+                </tr>
+
+            </table>
+            <!-- /Hlavná tabuľka emailu -->
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

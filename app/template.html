@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oświadczenie o odstąpieniu od umowy</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Tahoma, Arial, Verdana, sans-serif; font-size: 12px; color: #333333;">
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color: #f4f4f4;">
+    <tr>
+        <td align="center" style="padding: 20px 10px;">
+
+            <!-- Główna tabela emaila -->
+            <table width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff; border: 1px solid #e0e0e0;">
+
+                <!-- NAGŁÓWEK: Logo + Tytuł -->
+                <tr>
+                    <td style="padding: 15px 20px; border-bottom: 2px solid #cbccd0;">
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+                            <tr>
+                                <td width="220" valign="middle">
+                                    <div style="background-color: #F5DA02; padding: 8px 16px;">
+                                        <img src="https://www.merkurymarket.pl/gfx/merkurymarket/_thumbs/pl/media/14/1/logo_2-2,Zox3v5SVlJbr49Sdm6ZaZrBkh3t3lJuqaQ-png.webp"
+                                             alt="Merkury Market"
+                                             width="220" height="27"
+                                             style="display: block; border: 0;">
+                                    </div>
+                                </td>
+                                <td style="padding-left: 15px; text-align: right; font-size: 12px; font-weight: bold; color: #333333; line-height: 1.4;">
+                                    OŚWIADCZENIE O ODSTĄPIENIU OD UMOWY ZAWARTEJ NA ODLEGŁOŚĆ
+                                    {{NR_ZAMOWIENIA}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- TREŚĆ GŁÓWNA -->
+                <tr>
+                    <td style="padding: 20px 20px 10px 20px; font-size: 12px; line-height: 1.8; color: #333333;">
+
+                        <!-- Pozdrowienie i dane klienta -->
+                        <p style="margin: 0 0 10px 0;"><strong>Szanowny Panie/Szanowna Pani,</strong></p>
+                        <p style="margin: 0 0 4px 0;"><strong>{{IMIE_NAZWISKO}}</strong></p>
+                        <p style="margin: 0 0 4px 0;"><strong><a href="mailto:{{EMAIL_KLIENTA}}" style="color: #DC2322; text-decoration: none;">{{EMAIL_KLIENTA}}</a></strong></p>
+                        <p style="margin: 0 0 15px 0;"><strong>Telefon: {{TELEFON}}</strong></p>
+
+                        <!-- Potwierdzenie -->
+                        <p style="margin: 0 0 35px 0;">
+                            <strong>potwierdzamy otrzymanie Pana/Pani oświadczenia o odstąpieniu od umowy, złożonego w dniu&nbsp;
+                                <span style="color: #DC2322;">{{DATA_ZLOZENIA}}</span>&nbsp;za pośrednictwem funkcji odstąpienia na naszej stronie.</strong>
+                        </p>
+
+                        <!-- Dane sprzedawcy (wyrównane do prawej) -->
+                        <p style="text-align: right; margin: 0 0 30px 0; line-height: 1.7;">
+                            <strong>
+                                MERKURY MARKET Spółka<br>
+                                z ograniczoną odpowiedzialnością<br>
+                                sp.k. ul. Czajkowskiego 51<br>
+                                38-400 Krosno<br>
+                                e-mail:<br>
+                                <a href="mailto:odstapienia@merkurymarket.pl" style="color: #DC2322; text-decoration: none;">odstapienia@merkurymarket.pl</a>
+                            </strong>
+                        </p>
+
+                        <!-- Tytuł sekcji oświadczenia -->
+                        <p style="text-align: center; margin: 0 0 15px 0;">
+                            <strong>OŚWIADCZENIE O ODSTĄPIENIU OD UMOWY ZAWARTEJ NA ODLEGŁOŚĆ</strong>
+                        </p>
+
+                        <!-- Treść oświadczenia -->
+                        <p style="margin: 0 0 10px 0;">
+                            <strong>Oświadczam, że&nbsp;niniejszym informuję o&nbsp;odstąpieniu od umowy sprzedaży na odległość od następujących towarów:</strong>
+                        </p>
+
+                        <!-- PRODUKTY - powielić poniższy blok dla każdego zwracanego towaru -->
+                        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+
+                            <!--produkt 1-->
+                            <!--produkt 1-->
+                            <!--produkt 1-->
+                            <!--produkt 1-->
+                            <tr>
+                                <td style="padding: 8px 12px; font-size: 12px; line-height: 1.7; border-left: 3px solid #DC2322;">
+                                    <strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} SZT</strong><br>
+                                    <span style="color: #555555;">Kwota zwrotu: <strong>{{KWOTA_ZWROTU}}</strong>&nbsp;+ ewentualny koszt dostawy</span>
+                                </td>
+                            </tr>
+
+
+
+                            <!--      ODSTEP MIEDZY PRODUKTAMI-->
+                            <tr><td style="height: 8px; font-size: 0; line-height: 0;">&nbsp;</td></tr>
+                            <!--      ODSTEP MIEDZY PRODUKTAMI-->
+
+
+
+                            <!--produkt 2-->
+                            <!--produkt 2-->
+                            <!--produkt 2-->
+                            <!--produkt 2-->
+                            <tr>
+                                <td style="padding: 8px 12px; font-size: 12px; line-height: 1.7; border-left: 3px solid #DC2322;">
+                                    <strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} SZT</strong><br>
+                                    <span style="color: #555555;">Kwota zwrotu: <strong>{{KWOTA_ZWROTU}}</strong>&nbsp;+ ewentualny koszt dostawy</span>
+                                </td>
+                            </tr>
+
+
+                        </table>
+
+                        <!-- Informacje o zamówieniu -->
+                        <p style="margin: 14px 0 10px 0;">
+                            zakupionych na mocy nr zamówienia&nbsp;
+                            <strong style="color: #DC2322;">{{NR_ZAMOWIENIA}}</strong>
+                            &nbsp;z dnia&nbsp;
+                            <strong style="color: #DC2322;">{{DATA_ZAMOWIENIA}}</strong>
+                        </p>
+
+                        <!-- Zwrot produktu - lista -->
+                        <p style="margin: 0 0 5px 0;">Zwracam w stanie niezmienionym:</p>
+                        <p style="margin: 0 0 4px 0;"><strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} SZT</strong></p>
+
+                        <!-- Sposób i miejsce zwrotu -->
+                        <p style="margin: 10px 0 5px 0;"><strong>Sposób zwrotu:</strong>&nbsp;<strong>{{SPOSOB_ZWROTU}}</strong></p>
+                        <p style="margin: 0 0 5px 0;"><strong>Miejsce zwrotu:</strong>&nbsp;<strong>{{MIEJSCE_ZWROTU}}</strong></p>
+                        <p style="margin: 0 0 15px 0;"><strong>Zwrot na konto bankowe (gdy podano):&nbsp;</strong>{{NUMER_KONTA}}</p>
+
+                        <!-- Link do regulaminu -->
+                        <p style="margin: 0 0 20px 0;">
+                            Szczegółowe informacje dotyczące procedury zwrotu produktu oraz zasad zwrotu płatności znajdują się w&nbsp;
+                            <a href="https://www.merkurymarket.pl/regulamin/" target="_blank" style="color: #DC2322; text-decoration: none;">Regulaminie sklepu</a>.
+                        </p>
+
+                        <!-- Pozdrowienia -->
+                        <p style="margin: 0 0 5px 0;">
+                            Życzymy miłego dnia,<br>
+                            Zespół sklepu internetowego&nbsp;
+                            <a href="http://merkurymarket.pl/" target="_blank" style="color: #DC2322; text-decoration: none;">merkurymarket.pl</a>
+                        </p>
+
+                        <p style="margin: 20px 0 5px 0; color: #aaaaaa;">................................................................</p>
+
+                        <!-- Dane kontaktowe -->
+                        <p style="margin: 0 0 15px 0; line-height: 1.8;">
+                            Jesteśmy do Twojej dyspozycji:<br>
+                            Poniedziałek - Piątek:&nbsp;8:00 - 18:00<br>
+                            Sobota: 8:00 - 16:00<br>
+                            Kontaktowy numer telefonu:&nbsp;
+                            <a href="tel:322134900" style="color: #DC2322; text-decoration: none;">32 213 49 00</a><br>
+                            e-mail:&nbsp;
+                            <a href="mailto:esklep@merkurymarket.pl" style="color: #DC2322; text-decoration: none;">esklep@merkurymarket.pl</a>
+                        </p>
+
+                    </td>
+                </tr>
+
+                <!-- STOPKA -->
+                <tr>
+                    <td style="padding: 10px 20px; border-top: 1px solid #cbccd0; font-size: 11px; color: #666666; text-align: center;">
+                        All rights reserved &copy; {{ROK}}&nbsp;
+                        <a href="http://www.merkurymarket.pl/" target="_blank" style="color: #DC2322; text-decoration: none;">Merkury Market</a>
+                    </td>
+                </tr>
+
+            </table>
+            <!-- /Główna tabela emaila -->
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
