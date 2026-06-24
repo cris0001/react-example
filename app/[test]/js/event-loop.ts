@@ -631,7 +631,6 @@ async function foo() {
     console.log('4')
     await null
     console.log('5')
-}
 
 Promise.resolve().then(foo)
 
