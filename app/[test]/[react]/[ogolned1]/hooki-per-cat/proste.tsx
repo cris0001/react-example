@@ -23,10 +23,7 @@ export function useToggle(initial: boolean) {
 //   setValue(prev => val ?? !prev), [])
 
 // --- useLocalStorage (generyk + lazy init + synchronizacja) [Tier 1] -------
-export function useLocalStorage<T>(
-    key: string,
-    initialValue: T
-): [T, (v: T) => void] {
+export function useLocalStorage<T>(key: string, initialValue: T): [T, (v: T) => void] {
     // lazy init: funkcja () => ... czyta z localStorage TYLKO raz (na mount)
     const [value, setValue] = useState<T>(() => {
         if (typeof window === "undefined") return initialValue // SSR
