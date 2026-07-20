@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Oznámení o odstoupení od smlouvy uzavřené na dálku</title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Tahoma, Arial, Verdana, sans-serif; font-size: 12px; color: #333333;">
+
+<table border="0" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4;" width="100%">
+    <tr>
+        <td align="center" style="padding: 20px 10px;">
+
+
+            <table border="0" cellpadding="0" cellspacing="0"
+                   style="background-color: #ffffff; border: 1px solid #e0e0e0;"
+                   width="600">
+
+                <!-- NAGŁÓWEK:  -->
+                <tr>
+                    <td style="padding: 15px 20px; border-bottom: 2px solid #cbccd0;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td valign="middle" width="220">
+                                    <div style="background-color: #EE1C24; padding: 8px 16px;">
+                                        <img alt="bauMax"
+                                             height="30"
+                                             src="https://www.baumax.cz/gfx/baumax/_thumbs/cz/media/20/1/logo_baumax-new_stage,a4p0v5Sbo1Tc5tPpjqZoWapqhHh9kpWlaqw.svg"
+                                             style="display: block; border: 0;"
+                                             width="220">
+                                    </div>
+                                </td>
+                                <td style="padding-left: 15px; text-align: right; font-size: 12px; font-weight: bold; color: #333333; line-height: 1.4;">
+                                    OZNÁMENÍ O ODSTOUPENÍ OD SMLOUVY UZAVŘENÉ NA DÁLKU
+                                    {{NR_ZAMOWIENIA}}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+                <!-- TREŚĆ GŁÓWNA -->
+                <tr>
+                    <td style="padding: 20px 20px 10px 20px; font-size: 12px; line-height: 1.8; color: #333333;">
+
+                        <!-- Dane sprzedawcy  -->
+                        <p style="text-align: right; margin: 0 0 30px 0; line-height: 1.7;">
+                            <strong>
+                                BM ČESKO s.r.o.<br>
+                                společnost zapsaná v obchodním rejstříku vedeném u Městského soudu v Praze<br>
+                                pod sp. zn. C 246100<br>
+                                Identifikační číslo: 043 35 813<br>
+                                Adresa sídla: Türkova 1272/7, Chodov, 149 00 Praha 4, Česká republika<br>
+                                Adresa pro doručení: Baumax (BM ČESKO s.r.o.), ul. 17. listopadu 2261,<br>
+                                738 02 Frýdek – Místek, Česká republika<br>
+                                Elektronická adresa:
+                                <a href="mailto:e-shop@baumax.cz" style="color: #DC2322; text-decoration: none;">e-shop@baumax.cz</a>
+                            </strong>
+                        </p>
+
+                        <!-- Pozdrowienie i dane klienta -->
+                        <p style="margin: 0 0 10px 0;"><strong>Vážený pane / Vážená paní,</strong></p>
+                        <p style="margin: 0 0 4px 0; color: #DC2322;"><strong>{{IMIE_NAZWISKO}}</strong></p>
+                        <p style="margin: 0 0 4px 0;"><strong><a href="mailto:{{EMAIL_KLIENTA}}"
+                                                                 style="color: #DC2322; text-decoration: none;">{{EMAIL_KLIENTA}}</a></strong>
+                        </p>
+                        <p style="margin: 0 0 15px 0;"><strong>Telefon: </strong><strong style="color: #DC2322;">{{TELEFON}}</strong>
+                        </p>
+
+                        <p style="margin: 0 0 35px 0;">
+                            <strong>potvrzujeme přijetí Vašeho oznámení o odstoupení od smlouvy, které jste podal(a) dne&nbsp;
+                                <span style="color: #DC2322;">{{DATA_ZLOZENIA}}</span>&nbsp;prostřednictvím funkce
+                                odstoupení od smlouvy na našich webových stránkách.</strong>
+                        </p>
+
+                        <p style="text-align: center; margin: 0 0 15px 0;">
+                            <strong>OZNÁMENÍ O ODSTOUPENÍ OD SMLOUVY UZAVŘENÉ NA DÁLKU</strong>
+                        </p>
+
+                        <!-- Treść oświadczenia -->
+                        <p style="margin: 0 0 10px 0;">
+                            <strong>Tímto oznamuji, že odstupuji od kupní smlouvy uzavřené na dálku na následující
+                                zboží:</strong>
+                        </p>
+
+                        <!-- PRODUKTY  -->
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+
+                            <!-- PRODUKT 1 -->
+                            <tr>
+                                <td style="padding: 8px 12px; font-size: 12px; line-height: 1.7; border-left: 3px solid #DC2322;">
+                                    <strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} bal</strong><br>
+                                    <span style="color: #555555;">Částka k vrácení: <strong>{{KWOTA_ZWROTU}}</strong>&nbsp;+ případné náklady na dopravu</span>
+                                </td>
+                            </tr>
+
+                            <!-- ODSTĘP MIĘDZY PRODUKTAMI -->
+                            <tr>
+                                <td style="height: 8px; font-size: 0; line-height: 0;">&nbsp;</td>
+                            </tr>
+
+                            <!-- PRODUKT 2 -->
+                            <tr>
+                                <td style="padding: 8px 12px; font-size: 12px; line-height: 1.7; border-left: 3px solid #DC2322;">
+                                    <strong>{{NAZWA_PRODUKTU}} - {{ILOSC}} bal</strong><br>
+                                    <span style="color: #555555;">Částka k vrácení: <strong>{{KWOTA_ZWROTU}}</strong>&nbsp;+ případné náklady na dopravu</span>
+                                </td>
+                            </tr>
+
+                        </table>
+
+                        <!-- Informacje o zamówieniu -->
+                        <p style="margin: 14px 0 10px 0;">
+                            zakoupeného v rámci objednávky č.&nbsp;
+                            <strong style="color: #DC2322;">{{NR_ZAMOWIENIA}}</strong>
+                            <strong style="color: #DC2322;">{{DATA_ZAMOWIENIA}}</strong>
+                        </p>
+
+                        <!-- Zwrot towaru -->
+                        <p style="margin: 10px 0 5px 0; font-weight: bold">Vrácené zboží v nezměněném stavu:</p>
+                        <p style="margin: 0 0 10px 0; color: #DC2322;"><strong>{{NAZWA_PRODUKTU}} - {{ILOSC}}
+                            bal</strong></p>
+
+                        <!-- Sposób i miejsce zwrotu -->
+                        <p style="margin: 10px 0 5px 0;"><strong>Způsob
+                            vrácení:</strong>&nbsp;<strong style="color: #DC2322;">{{SPOSOB_ZWROTU}}</strong></p>
+                        <p style="margin: 0 0 5px 0;"><strong>Místo
+                            vrácení:</strong>&nbsp;<strong style="color: #DC2322;">{{MIEJSCE_ZWROTU}}</strong></p>
+                        <p style="margin: 0 0 15px 0;"><strong>Vrácení peněz na bankovní účet (pokud byl
+                            uveden):&nbsp;</strong><strong style="color: #DC2322;">{{NUMER_KONTA}}</strong></p>
+
+                        <!-- Link do regulaminu -->
+                        <p style="margin: 0 0 20px 0;">
+                            Podrobné informace o postupu vrácení zboží a podmínkách vrácení plateb naleznete v&nbsp;
+                            <a href="https://www.baumax.cz/obchodni-podminky/"
+                               style="color: #DC2322; text-decoration: none;"
+                               target="_blank">Obchodních podmínkách</a>.
+                        </p>
+
+                        <!-- Pozdrowienia -->
+                        <p style="margin: 0 0 5px 0;">
+                            Přejeme příjemný den,<br>
+                            Pracovníci e-shopu&nbsp;
+                            <a href="http://baumax.cz/" style="color: #DC2322; text-decoration: none;" target="_blank">baumax.cz</a>
+                        </p>
+
+                        <p style="margin: 20px 0 5px 0; color: #aaaaaa;">
+                            ................................................................</p>
+
+                        <!-- Dane kontaktowe -->
+                        <p style="margin: 0 0 15px 0; line-height: 1.8;">
+                            Informace o vaší objednávce vám poskytneme v pracovních dnech pondělí až sobota od 8:00 do
+                            18:00<br>
+                            Kontakt:&nbsp;
+                            <a href="tel:+420222250166"
+                               style="color: #000000; text-decoration: none; font-weight: bold">+420 222 250
+                                166</a>
+                        </p>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="padding: 10px 20px; border-top: 1px solid #cbccd0; font-size: 11px; color: #666666; text-align: center;">
+                        All rights reserved &copy; {{ROK}}&nbsp;
+                        <a href="http://www.baumax.cz/" style="color: #DC2322; text-decoration: none;" target="_blank">bauMax</a>
+                    </td>
+                </tr>
+
+            </table>
+
+
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
