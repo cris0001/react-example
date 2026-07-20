@@ -56,7 +56,7 @@ export function LoginForm() {
     if (isSuccess) return <p>Zalogowano.</p>
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-80">
+        <form noValidate onSubmit={handleSubmit} className="flex flex-col gap-4 w-80">
             <div className="flex flex-col gap-1">
                 <label htmlFor="email">Email</label>
                 <input

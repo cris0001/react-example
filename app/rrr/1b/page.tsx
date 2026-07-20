@@ -1,4 +1,4 @@
-// Next.js App Router — punkt wejścia dla trasy /rrr/1
+// Next.js App Router — punkt wejścia dla trasy /rrr/1b
 // Server Component (brak 'use client') — tylko renderuje LoginForm,
 // który sam ma 'use client', bo używa hooków.
 
