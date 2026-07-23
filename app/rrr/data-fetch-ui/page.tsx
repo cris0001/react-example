@@ -23,7 +23,7 @@ export default function Page() {
 //
 // Requirements:
 //
-//     fetch and display the current page of users (name + email)
+// fetch and display the current page of users (name + email)
 // "Previous" / "Next" buttons to change page
 // disable "Previous" on page 1, "Next" on the last page
 // show the current page number ("Page 2 of 4")
