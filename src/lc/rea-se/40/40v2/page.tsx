@@ -34,6 +34,22 @@
 
     SUGEROWANA KOLEJNOŚĆ (od "rozgrzewki" do najtrudniejszych)
     01 → 02 → 05 → 09 → 14 → 03 → 11 → 06 → 04 → 15 → 08 → 12 → 10 → 13 → 07
+
+    SZYBKIE KLASYKI (20–45 min, rób NA CZAS — ustaw minutnik, po czasie odkładasz klawiaturę)
+    Te najczęściej trafiają się 1:1 na livecodingu. Rób MUST w limicie, utrudnienia dopiero potem.
+    [ ] 16-tic-tac-toe          ★★☆☆   30 min  Kółko i krzyżyk N×N, M w linii, sprawdzanie wygranej
+    [ ] 17-memory-game          ★★☆☆   30 min  Memory: tasowanie Fisher-Yates, timeout na zakrycie, licznik
+    [ ] 18-otp-input            ★★★☆   35 min  6 pól OTP: fokus, backspace, wklejanie, onComplete
+    [ ] 19-modal                ★★★☆   40 min  Modal: portal, focus trap, powrót fokusu, Esc, blokada scrolla
+    [ ] 20-tabs                 ★★★☆   35 min  Tabs jako compound component, controlled/uncontrolled, roving tabindex
+    [ ] 21-stopwatch            ★★☆☆   30 min  Stoper z okrążeniami: dokładny czas z różnicy znaczników
+    [ ] 22-traffic-light        ★★☆☆   25 min  Sygnalizacja: maszyna stanów, cykl jako dane, przycisk pieszego
+    [ ] 23-carousel             ★★★☆   40 min  Karuzela: autoplay z pauzą, zawijanie, lazy load, swipe
+    [ ] 24-poll-widget          ★★☆☆   30 min  Ankieta: optimistic, procenty sumujące się do 100
+    [ ] 25-progress-bars-queue  ★★★☆   30 min  Paski postępu: max 3 naraz, kolejka, pauza (warianty co 10 min)
+    [ ] 26-infinite-virtual-feed ★★★★  45 min  Infinite scroll + ręczna wirtualizacja + przywracanie scrolla
+
+    PLAN TYGODNIA (propozycja): 2 szybkie klasyki na czas + 1 duże zadanie.
 */
 
 export default function Page() {
